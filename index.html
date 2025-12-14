@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaobie-start.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaobie-start.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/config.min.js" defer></script>
 
     <meta name="description" content="记录计算机视觉和日常">
 <meta property="og:type" content="website">
@@ -50,7 +50,7 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/utils.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/motion.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/sidebar.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/next-boot.min.js" defer></script>
 
   
 
@@ -67,7 +67,7 @@
   
 
   <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="/js/third-party/math/mathjax.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.26.0/source/js/third-party/math/mathjax.min.js" defer></script>
 
 
 
@@ -234,22 +234,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="👁️-视觉矩阵的滤镜"><a href="#👁️-视觉矩阵的滤镜" class="headerlink" title="👁️ 视觉矩阵的滤镜"></a>👁️ 视觉矩阵的滤镜</h2><p>在计算机视觉的地下世界中，图像是一堆像素矩阵，而**卷积核（Kernel）**就是作用于这个矩阵上的定制滤镜。它负责提取图像中的关键特征，就像黑客入侵时过滤数据流一样。</p>
+          <h2 id="👁️-视觉矩阵的滤镜"><a href="#👁️-视觉矩阵的滤镜" class="headerlink" title="👁️ 视觉矩阵的滤镜"></a>👁️ 视觉矩阵的滤镜</h2><p>在计算机视觉的地下世界中，图像是一堆像素矩阵，而<strong>卷积核（Kernel）</strong>就是作用于这个矩阵上的定制滤镜。它负责提取图像中的关键特征，就像黑客入侵时过滤数据流一样。</p>
 <h3 id="卷积核的作用机制"><a href="#卷积核的作用机制" class="headerlink" title="卷积核的作用机制"></a>卷积核的作用机制</h3><p>简单来说，卷积核就是一小块矩阵（比如 $3 \times 3$ 或 $5 \times 5$），它在整个图像矩阵上滑动，并执行元素乘积和求和操作。</p>
-<p>$$<br>Output(i, j) &#x3D; \sum_{m} \sum_{n} Input(i+m, j+n) \cdot Kernel(m, n)<br>$$</p>
-<h3 id="⚙️-核心代码：边缘检测"><a href="#⚙️-核心代码：边缘检测" class="headerlink" title="⚙️ 核心代码：边缘检测"></a>⚙️ 核心代码：边缘检测</h3><p>最经典的卷积核就是用于<strong>边缘检测</strong>的内核。这个内核能突出图像中像素变化剧烈的地方，就像在黑暗城市中锁定霓虹灯的轮廓。</p>
-<pre><code class="language-python">import numpy as np
-
-# 这是一个经典的 3x3 边缘检测卷积核（Sobel 或 Prewitt 算子简化版）
-edge_kernel = np.array([
-    [-1, -1, -1],
-    [-1, 8, -1],
-    [-1, -1, -1]
-])
-
-print(&quot;--- 视觉矩阵滤镜加载成功 ---&quot;)
-print(edge_kernel)
-</code></pre>
+<script type="math/tex; mode=display">
+Output(i, j) = \sum_{m} \sum_{n} Input(i+m, j+n) \cdot Kernel(m, n)</script><h3 id="⚙️-核心代码：边缘检测"><a href="#⚙️-核心代码：边缘检测" class="headerlink" title="⚙️ 核心代码：边缘检测"></a>⚙️ 核心代码：边缘检测</h3><p>最经典的卷积核就是用于<strong>边缘检测</strong>的内核。这个内核能突出图像中像素变化剧烈的地方，就像在黑暗城市中锁定霓虹灯的轮廓。</p>
+<p>```python<br>import numpy as np</p>
+<h1 id="这是一个经典的-3x3-边缘检测卷积核（Sobel-或-Prewitt-算子简化版）"><a href="#这是一个经典的-3x3-边缘检测卷积核（Sobel-或-Prewitt-算子简化版）" class="headerlink" title="这是一个经典的 3x3 边缘检测卷积核（Sobel 或 Prewitt 算子简化版）"></a>这是一个经典的 3x3 边缘检测卷积核（Sobel 或 Prewitt 算子简化版）</h1><p>edge_kernel = np.array([<br>    [-1, -1, -1],<br>    [-1, 8, -1],<br>    [-1, -1, -1]<br>])</p>
+<p>print(“—- 视觉矩阵滤镜加载成功 —-“)<br>print(edge_kernel)</p>
 
       
     </div>
