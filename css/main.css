@@ -1431,7 +1431,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #2dff7c;
+  background: #c6c89f;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1842,6 +1842,12 @@ pre code {
   display: inline-block;
   margin: 0 5px;
 }
+.busuanzi-count #busuanzi_container_site_uv {
+  display: none;
+}
+.busuanzi-count #busuanzi_container_site_pv {
+  display: none;
+}
 @keyframes icon-animate {
   0%, 100% {
     transform: scale(1);
@@ -1898,6 +1904,16 @@ pre code {
 }
 .back-to-top.back-to-top-on {
   bottom: 30px;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #0ff;
+  height: 3px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2269,6 +2285,9 @@ pre code {
   flex-basis: 100%;
   height: 0;
 }
+#busuanzi_container_page_pv {
+  display: none;
+}
 .post-nav {
   border-top: 1px solid #eee;
   display: flex;
@@ -2617,6 +2636,112 @@ ul.breadcrumb li:last-child {
     color: #eee;
   }
 }
+.search-active {
+  overflow: hidden;
+  margin-right: var(--dialog-scrollgutter, 0);
+}
+.search-pop-overlay {
+  background: rgba(0,0,0,0);
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0.4s, background 0.4s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 40;
+}
+.search-active .search-pop-overlay {
+  background: rgba(0,0,0,0.3);
+  visibility: visible;
+}
+.search-popup {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  height: 80%;
+  margin: auto;
+  transform: scale(0);
+  transition: transform 0.4s;
+  width: 700px;
+}
+.search-active .search-popup {
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .search-popup {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.search-popup .search-icon,
+.search-popup .popup-btn-close {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.search-popup .popup-btn-close {
+  cursor: pointer;
+}
+.search-popup .popup-btn-close:hover .fa {
+  color: #222;
+}
+.search-popup .search-header {
+  background: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  .search-popup .search-header {
+    background: #666;
+  }
+}
+.search-popup input.search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+.search-popup input.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-popup .search-result-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 55px);
+  overflow: auto;
+  padding: 5px 25px;
+}
+.search-popup .search-result-container hr {
+  flex-shrink: 0;
+  margin: 5px 0 10px;
+}
+.search-popup .search-result-container hr:first-child {
+  display: none;
+}
+.search-popup .search-result-list {
+  margin: 0 5px;
+  padding: 0;
+}
+.search-popup a.search-result-title {
+  font-weight: bold;
+}
+.search-popup p.search-result {
+  border-bottom: 1px dashed #ccc;
+  margin: 0 0 10px;
+  padding: 5px 0;
+}
+.search-popup .search-input-container {
+  flex-grow: 1;
+  padding: 2px;
+}
+.search-popup .search-result-icon {
+  color: #ccc;
+  margin: auto;
+}
 mark.search-keyword {
   background: transparent;
   border-bottom: 1px dashed #ff2a2a;
@@ -2777,6 +2902,8 @@ header.header {
     left: 320px;
   }
 }
+/* source/css/custom_cyber.css */
+
 /* 赛博朋克强调色：亮青色 (Neon Cyan) */
 :root {
   --next-color-theme: #00FFFF; /* 主强调色：青色 */
@@ -2795,4 +2922,31 @@ a:hover {
 /* 稍微调整一下文章标题颜色，让它更白亮 */
 .post-title, .post-title-link {
     color: #ffffff !important;
+}
+
+
+
+/* 1. 让主容器背景变透明 */
+.header-inner, 
+.sidebar-inner, 
+.post-block, 
+.comments, 
+.pagination {
+    /* 核心：背景颜色变成 85% 不透明度的深黑，保留一点透视感 */
+    background: rgba(20, 20, 20, 0.85) !important;
+    /* 加一点毛玻璃模糊效果，看起来更高级 */
+    backdrop-filter: blur(2px); 
+    /* 边框发一点点微光 */
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* 2. 去掉页面整体的灰背景，直接露出 Canvas */
+body {
+    background: #000 !important; /* 纯黑底色 */
+}
+
+/* 3. 针对 Next Muse 主题的特殊修正 */
+.main-inner {
+    background: transparent !important;
+    margin-top: 20px;
 }

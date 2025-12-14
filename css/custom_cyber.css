@@ -1,3 +1,5 @@
+/* source/css/custom_cyber.css */
+
 /* 赛博朋克强调色：亮青色 (Neon Cyan) */
 :root {
   --next-color-theme: #00FFFF; /* 主强调色：青色 */
@@ -16,4 +18,31 @@ a:hover {
 /* 稍微调整一下文章标题颜色，让它更白亮 */
 .post-title, .post-title-link {
     color: #ffffff !important;
+}
+
+
+
+/* 1. 让主容器背景变透明 */
+.header-inner, 
+.sidebar-inner, 
+.post-block, 
+.comments, 
+.pagination {
+    /* 核心：背景颜色变成 85% 不透明度的深黑，保留一点透视感 */
+    background: rgba(20, 20, 20, 0.85) !important;
+    /* 加一点毛玻璃模糊效果，看起来更高级 */
+    backdrop-filter: blur(2px); 
+    /* 边框发一点点微光 */
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* 2. 去掉页面整体的灰背景，直接露出 Canvas */
+body {
+    background: #000 !important; /* 纯黑底色 */
+}
+
+/* 3. 针对 Next Muse 主题的特殊修正 */
+.main-inner {
+    background: transparent !important;
+    margin-top: 20px;
 }
