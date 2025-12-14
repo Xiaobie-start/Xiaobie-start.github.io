@@ -1,0 +1,19 @@
+/* 赛博朋克强调色：亮青色 (Neon Cyan) */
+:root {
+  --next-color-theme: #00FFFF; /* 主强调色：青色 */
+  --next-btn-hover-color: #00FFFF; /* 按钮悬停 */
+  --next-link-color: #00FFFF; /* 链接颜色 */
+  --next-selection-bg-color: #39FF14; /* 选中背景：荧光绿 */
+  --next-selection-color: #000000; /* 选中文字：黑色 */
+}
+
+/* 链接悬停时的光晕效果 */
+a:hover {
+  text-shadow: 0 0 5px var(--next-color-theme), 0 0 10px var(--next-color-theme); 
+  border-bottom-color: var(--next-color-theme);
+}
+
+/* 稍微调整一下文章标题颜色，让它更白亮 */
+.post-title, .post-title-link {
+    color: #ffffff !important;
+}
