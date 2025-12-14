@@ -112,3 +112,10 @@ deploy:
 kramed:
   gfm: true
   breaks: true
+  
+# Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
