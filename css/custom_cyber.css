@@ -46,3 +46,21 @@ body {
     background: transparent !important;
     margin-top: 20px;
 }
+
+/*2025/12/15 16:24*/
+/* 移除文章内标题下方的横线 */
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+    border-bottom: none !important;
+}
+
+/* 如果你觉得标题离正文太近了，可以顺便加点间距（可选） */
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+    margin-bottom: 20px; 
+}
