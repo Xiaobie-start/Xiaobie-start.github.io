@@ -9,6 +9,24 @@
 # See: https://theme-next.js.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
+# ---------------------------------------------------------------
+# Valine (放在最前面防止缩进错误)
+# ---------------------------------------------------------------
+valine:
+  enable: true
+  appid: IMOQHCslY2hTDrU38UBjVX6e-MdYXbMMI
+  appkey: m99CFxxnCkC6UM0dZCrJNehZ
+  serverURLs: https://imoqhcsl.api.lncldglobal.com
+  placeholder: 留下你的信号...
+  visitor: true
+  comment_count: true
+  recordIP: false
+  cdn: https://unpkg.com/valine@1.5.1/dist/Valine.min.js
+
+# ---------------------------------------------------------------
+# 下面是原有的配置...
+# ---------------------------------------------------------------
+
 # Allow to cache content generation.
 cache:
   enable: true
@@ -686,7 +704,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | livere | gitalk | utterances | isso
-  active:
+  active: valine  
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -902,7 +920,7 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: cdnjs
+  plugins: unpkg
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
